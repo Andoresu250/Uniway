@@ -7,6 +7,11 @@ body {
   position: absolute;
   z-index: 0;
 }
+#map .gmnoprint, #map .gm-style-cc{
+        display: none !important;
+      }
+      #map .gm-style a[href^="https://maps.google.com/maps?ll=-34.397,150.644&z=13&t=m&hl=en-US&gl=US&mapclient=apiv3"]{display:none !important}
+      
 #form{
   position: relative;
   z-index: 20;
