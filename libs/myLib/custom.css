@@ -1,7 +1,16 @@
-body {
-    background-color: #B71C1C;    
+body {   
+  color: black !important;
 }
-
+#map {
+  min-height: 100%; 
+  min-width: 100%; 
+  position: absolute;
+  z-index: 0;
+}
+#form{
+  position: relative;
+  z-index: 20;
+}
 .border {
 	border-style: solid;
 	border-width: 5px;
@@ -16,20 +25,25 @@ body {
 }
 
 input{
-	color: white;
+	color: black !important;
+}
+
+
+.btn{
+  background-color: red !important;
 }
 
   /* label color */
    .input-field label {
-     color: white;
+     color: black;
    }
    /* label focus color */
    .input-field input[type=text]:focus + label {
-     color: white;
+     color: black;
    }
    /* label underline focus color */
    .input-field input[type=text]:focus {
-     border-bottom: 1px solid white;
+     border-bottom: 1px solid red;
      box-shadow: 0 1px 0 0 white;
    }
    /* valid color */
@@ -44,12 +58,12 @@ input{
    }
 
 	.input-field input[type=password]:focus + label {
-     color: white;
+     color: black;
    }
    /* label underline focus color */
    .input-field input[type=password]:focus {
-     border-bottom: 1px solid white;
-     box-shadow: 0 1px 0 0 ;
+     border-bottom: 1px solid red;
+     box-shadow: 0 1px 0 0 white;
    }
    /* valid color */
    .input-field input[type=password].valid {
@@ -64,5 +78,5 @@ input{
 
    /* icon prefix focus color */
    .input-field .prefix.active {
-     color: white;
+     color: red;
    }
