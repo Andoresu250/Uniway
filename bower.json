@@ -1,0 +1,18 @@
+{
+  "name": "Uniway",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Andoresu250/Uniway",
+  "authors": [
+    "Andoresu250 <andres-vera95hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "dependencies": {
+    "Materialize": "materialize#~0.97.1"
+  },
+  "install":{
+    "path": "libs"
+  }
+}
