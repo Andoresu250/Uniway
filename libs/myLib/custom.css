@@ -7,6 +7,9 @@ body {
   position: absolute;
   z-index: 0;
 }
+#map .gmnoprint, #map .gm-style-cc{
+  display: none !important;
+}
 #form{
   position: relative;
   z-index: 20;
