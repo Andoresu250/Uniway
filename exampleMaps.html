@@ -16,11 +16,6 @@
         position: absolute;
         z-index: 0;
       }
-      #map .gmnoprint, #map .gm-style-cc{
-        display: none !important;
-      }
-      #map .gm-style a[href^="https://maps.google.com/maps?ll=-34.397,150.644&z=13&t=m&hl=en-US&gl=US&mapclient=apiv3"]{display:none !important}
-      
       #form{
         position: relative;
         z-index: 20;
@@ -34,14 +29,9 @@
   </head>
   <body>
     <div id="map" ></div>
-    <div id="form">
-      <div id="input">
-        <input id="input2" type="text">
-        <input id="input3" type="text">
-      </div>
-    </div>
-    <script type="text/javascript" src="libs/myLib/Maps/maps.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUBdsfwAMjMRmkyFhGIF9mqnUcf7c-r-4&callback=initMap"
         async defer></script>
+    <script type="text/javascript" src="libs/myLib/Maps/maps.js"></script>
+    
   </body>
 </html>
