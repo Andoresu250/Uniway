@@ -5,8 +5,9 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 16,
     center: {lat: 10.983812, lng: -74.8180175},  // Barranquilla
-    mapTypeId: google.maps.MapTypeId.HYBRID
+    mapTypeId: google.maps.MapTypeId.ROADMAP
   });
+
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
