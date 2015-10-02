@@ -7,6 +7,9 @@ function initMap() {
     center: {lat: 10.983812, lng: -74.8180175},  // Barranquilla
     mapTypeId: google.maps.MapTypeId.HYBRID
   });
+  var infoWindow = new google.maps.InfoWindow({map: map});
+
+  // Try HTML5 geolocation.
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var pos = {
@@ -24,6 +27,9 @@ function initMap() {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
   }
+  var markerF = new google.maps.Marker({
+    position: {lat: 11.0181227,lng: -74.8507938},
+  });
   var directionsService = new google.maps.DirectionsService;
   var directionsDisplay = new google.maps.DirectionsRenderer({
     draggable: true,
@@ -31,8 +37,8 @@ function initMap() {
   });
   google.maps.event.addListener(map, 'click', function(event) {
     addMarker(event.latLng, map);
-    if(markers.length>1){
-      calculateAndDisplayRoute(directionsService, directionsDisplay);
+    if(markers.length>0){
+      calculateAndDisplayRoute(directionsService, directionsDisplay, markerF);
     }
   });
 }
@@ -51,17 +57,18 @@ function clearMarkers(map){
       markers[i].setMap(null);
   }
 }
-function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+function calculateAndDisplayRoute(directionsService, directionsDisplay, markerF) {
   var waypts = [];
-  for (var i = 1; i < labelIndex-2; i++) {
+  for (var i = 1; i < labelIndex-1; i++) {
       waypts.push({
-        location: markers[i].position
+        location: markers[i].position,
+        stopover: true
       });
   }
   clearMarkers(directionsDisplay.map);
   directionsService.route({
     origin: markers[0].position,
-    destination: markers[labelIndex-1].position,
+    destination: markerF.position,
     waypoints: waypts,
     travelMode: google.maps.TravelMode.DRIVING,
     avoidTolls: true
