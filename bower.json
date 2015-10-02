@@ -1,18 +1,21 @@
 {
-  "name": "Uniway",
-  "version": "0.0.1",
-  "homepage": "https://github.com/Andoresu250/Uniway",
+  "name": "UniwayApp",
+  "version": "0.0.0",
   "authors": [
-    "Andoresu250 <andres-vera95hotmail.com>"
+    "Andres Felipe Vera Arenas <andres-vera95@hotmail.com>"
   ],
   "description": "",
   "main": "",
   "moduleType": [],
   "license": "MIT",
+  "homepage": "",
   "dependencies": {
+    "angular": "~1.4.7",
+    "angular-animate": "~1.4.7",
+    "angular-route": "~1.4.7",
     "Materialize": "materialize#~0.97.1"
   },
-  "install":{
-    "path": "libs"
+  "install": {
+    "path": "client/libs"
   }
 }

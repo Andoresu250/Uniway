@@ -1,0 +1,151 @@
+<div id="form" ng-controller="scrollCtrl" class="">
+	<div class="container" ng-show="isActive('1')">
+		<div class="row">
+			<div class="col s8 offset-s2">
+				<img ng-src="{{logo}}" class="responsive-img circle border be-white"></img>
+			</div>			
+		</div>
+		<div class="row">
+	    	<div class="col s12">		      	
+		        <div class="input-field col s12">
+		          <i class="material-icons prefix">account_circle</i>	
+		          <input id="userName" type="text" class="" data-bind="user"></input>
+		          <label for="userName">User Name</label>
+		        </div>
+			 </div>					
+		</div>
+		<div class="row">
+		    <div class="col s12">				    
+		        <div class="input-field col s12">
+		          <i class="material-icons prefix">vpn_key</i>		
+		          <input id="password" type="password" class="" data-bind="password"></input>
+		          <label for="password">Password</label>
+		        </div>
+		    </div>					
+		</div>
+		<div class="row">
+		    <div class="col s12">				    
+		        <div class="input-field col s12">
+		          <i class="material-icons prefix">vpn_key</i>		
+		          <input id="confirmPassword" type="password" class="" data-bind="confirmPassword"></input>
+		          <label for="confirmPassword">Confirm Password</label>
+		        </div>
+		    </div>					
+		</div>
+		<div class="row ">
+			<div class="col s6">				
+				<a class="btn left" href="#/signIn">Back</a>
+			</div>			
+			<div class="col s6">				
+				<a class="btn right" ng-click="asignActive('2')">Next</a>
+			</div>
+		</div>			
+	</div>
+
+
+	<div class="container" ng-show="isActive('2')">		
+		<br></br>
+		<div class="row">			
+	    	<div class="col s12">		      	
+		        <div class="input-field col s12">
+		          <i class="material-icons prefix">snooze</i>	
+		          <input id="timeOut" type="text" class="" data-bind="timeOut"></input>
+		          <label for="timeOut">time of departure</label>
+		        </div>
+			 </div>					
+		</div>
+		<div class="row">
+	    	<div class="col s12">		      	
+		        <div class="input-field col s12">
+		          <i class="material-icons prefix">av_timer</i>	
+		          <input id="timeIn" type="text" class="" data-bind="timeIn"></input>
+		          <label for="timeIn">time of arrival</label>
+		        </div>
+			 </div>					
+		</div>
+		<div class="row">
+	    	<div class="col s12">		      	
+		        <div class="input-field col s12">
+		          <i class="material-icons prefix">location_on</i>	
+		          <input id="adress" type="text" class="" data-bind="adress"></input>
+		          <label for="adress">Adress</label>
+		        </div>
+			 </div>					
+		</div>
+		<div class="row">
+			<div class="col s6">				
+				<a class="btn left " ng-click="asignActive('1')">Back</a>
+			</div>			
+			<div class="col s6">				
+				<a class="btn right " ng-click="asignActive('3')">Next</a>
+			</div>
+		</div>			
+	</div>
+
+
+	<div class="container" ng-show="isActive('3')">		
+		<br></br>
+		<div class="row">			
+	        <div class="col s12 m6">
+	          <div class="card indigo darken-4">
+	            <div class="card-content white-text">
+	              <span class="card-title">Are you driver?</span>
+	            </div>
+	            <div class="card-action">
+	              <a ng-click="asignActive('4')">Yes I am!</a>
+	              <a data-bind="click:register" ng-click="asignActive('5')">No, I am passenger</a>
+	            </div>
+	          </div>
+	        </div>		      
+		</div>
+	</div>
+
+	<div class="container" ng-show="isActive('4')">		
+		<br></br>
+		<div class="row">			
+	    	<div class="col s12">		      	
+		        <div class="input-field col s12">
+		          <i class="fa fa-car prefix"></i>
+		          <input id="seats" type="text" class="" data-bind="seats"></input>
+		          <label for="seats">Number of seats</label>
+		        </div>
+			 </div>					
+		</div>
+		<div class="row">
+	    	<div class="col s12">		      	
+		        <div class="input-field col s12">
+		          <i class="fa fa-road prefix"></i>	
+		          <input id="carPlate" type="text" class="" data-bind="carPlate"></input>
+		          <label for="carPlate">Car plate</label>
+		        </div>
+			 </div>					
+		</div>
+		<div class="row">
+			<div class="col s6">				
+				<a class="btn left" ng-click="asignActive('3')">Back</a>
+			</div>			
+			<div class="col s6">
+			 	<button class="btn right" data-bind="click:register" ng-click="asignActive('5')">Next    				
+  				</button>				
+			</div>				
+		</div>
+	</div>
+
+	<div class="container" ng-show="isActive('5')">		
+		<br></br>
+		<div class="row">
+	        <div class="col s12 m6">
+	          <div class="card indigo darken-4">
+	            <div class="card-content white-text">
+	              <span class="card-title">Congratulations!</span>
+	              <p>Your registration has been successful</p>
+	            </div>
+	            <div class="card-action">
+	              <a href="#/signIn">Login</a>	              
+	            </div>
+	          </div>
+	        </div>		
+		</div>
+	</div>
+
+</div>

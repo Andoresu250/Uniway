@@ -1,0 +1,124 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.back{
+  background-image: url(../img/back.PNG) ;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;   
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.transparent{
+  opacity: 0.1;
+  filter: alpha(opacity=10);
+}
+
+#viewport{
+  height: 100%;
+  width: 100%;
+}
+#map {
+  height: 100%; 
+  width: 100%; 
+  padding: 0;
+  position: absolute;
+  z-index: 0;
+}
+#map .gmnoprint, #map .gm-style-cc{
+  display: none !important;
+}
+#form{
+  position: relative;
+  z-index: 20;
+}
+.border {
+	border-style: solid;
+	border-width: 5px;
+}
+
+.be-white {
+	color: white;
+}
+
+.right {
+	float: right !important;
+}
+
+.left {
+  float: left !important;
+}
+
+input{
+	color: black !important;
+}
+
+
+.btn{
+  background-color: red !important;
+}
+
+  /* label color */
+   .input-field label {
+     color: black;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: black;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid red;
+     box-shadow: 0 1px 0 0 white;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid white;
+     box-shadow: 0 1px 0 0 white;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 white;
+   }
+
+	.input-field input[type=password]:focus + label {
+     color: black;
+   }
+   /* label underline focus color */
+   .input-field input[type=password]:focus {
+     border-bottom: 1px solid red;
+     box-shadow: 0 1px 0 0 white;
+   }
+   /* valid color */
+   .input-field input[type=password].valid {
+     border-bottom: 1px solid white;
+     box-shadow: 0 1px 0 0 white;
+   }
+   /* invalid color */
+   .input-field input[type=password].invalid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 white;
+   }
+
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: red;
+   }
+
+
+.animate-enter {
+  -webkit-transition: 1s linear all; /* Chrome */
+  transition: 1s linear all;
+  opacity: 0;
+}
+
+.animate-enter.animate-enter-active {
+  opacity: 1;
+}
