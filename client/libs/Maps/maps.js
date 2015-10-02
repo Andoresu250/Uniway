@@ -7,8 +7,6 @@ function initMap() {
     center: {lat: 10.983812, lng: -74.8180175},  // Barranquilla
     mapTypeId: google.maps.MapTypeId.HYBRID
   });
-  var infoWindow = new google.maps.InfoWindow({map: map});
-
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -16,16 +14,11 @@ function initMap() {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
-
-      infoWindow.setPosition(pos);
-      infoWindow.setContent('Location found.');
       map.setCenter(pos);
     }, function() {
-      handleLocationError(true, infoWindow, map.getCenter());
     });
   } else {
     // Browser doesn't support Geolocation
-    handleLocationError(false, infoWindow, map.getCenter());
   }
   var markerF = new google.maps.Marker({
     position: {lat: 11.0181227,lng: -74.8507938},
